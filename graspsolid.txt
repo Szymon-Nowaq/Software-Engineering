@@ -1,0 +1,42 @@
+DRY:
+ujednolicić dodawanie rezerwacji/wydarzeń do kalendarza
+Ta sama metodyka dla dodawania opinii
+
+KISS - spełnione
+
+Minimise coupling:
+zastosowanie meto abstrakcyjnych dla metod wymienionych w DRY, w celu braku błędów w np dodawaniu opinii przez lekarza, gdy zmieni się coś w dodawaniu przez użytkownika
+
+ADP: brak
+
+SDP: przykładowe zastosowanie:
+lekarz jest niezmienialny
+
+SAP:
+Należy dodać klasy i metody abstrakcyjne w celu spełnienia wymagania.
+
+SOLID:
+Single responsibility:
+Klasa uzytkownik powinna tylko przechowywac dane, a u nas wykonuje funkcje ktore moglyby byc wykonywane przez osobne stworzone do tego klasy.
+
+
+
+GRASP:
+InformationExpert: Lekarz i użytkownik są odpowiedzialni
+
+Creator: kalendarz przechowuje dane rezerwacji, agreguje rezerwacje a jednak rezerwacja jest tworzona przez klase uzytkownik
+
+Controller: nie dotyczy typu projektu
+
+Low Coupling - bylo wczesniej opisane
+
+High Cohesion - raczej spelnione
+
+Polimorfizm - do zapewnienia, np dodawanie wydarzeń do kalendarza przez różnych aktorów, do użycia funkcje/klasy abstrakcyjne
+
+Pure Fabrication - nie dotyczy
+
+Indirection -  
+
+Protected Variations - spełnione, (na ten moment) elementem zmiennym jest kalendarz, 
+ale żaden element nie jest zależny od kalendarza
